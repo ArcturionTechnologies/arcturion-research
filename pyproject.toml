@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arcturion-research"
+version = "0.1.0"
+description = "Multi-source research router: web, news, scholarly, books, places, images and video, merged and deduplicated"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Arcturion Technologies"}]
+dependencies = ["requests>=2.28"]
+
+[project.scripts]
+arcturion-research = "arcturion_research.router:main"
+
+[tool.setuptools.packages.find]
+include = ["arcturion_research*"]
